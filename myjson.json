@@ -1,0 +1,41 @@
+[
+    {
+      "firstName": "Bob",
+      "lastName": "Smith",
+      "gender": "male",
+      "age": 35,
+      "children": {
+        "daugthers": [
+          {
+            "name": "Cristal",
+            "gender": "female",
+            "age": 18
+          },
+          {
+            "name": "Hanna",
+            "gender": "female",
+            "age": 5
+          }
+        ],
+        "sons": [
+          {
+            "name": "Mike",
+            "gender": "male",
+            "age": 15
+          }
+        ]
+      },
+      "hobbies": [
+        "cycling",
+        "swimming",
+        "shooting"
+      ],
+      "luckyNumbers": [
+        3,
+        5,
+        15,
+        99,
+        77
+      ]
+    }
+] 
