@@ -77,6 +77,7 @@ function newWriteTo(){
     writeToFile( './writeFile.json', user2)
   };
 }
+
 newWriteTo()
 
 
