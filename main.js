@@ -1,6 +1,8 @@
 const {readFromFile,writeToFile,updateObject} =require('./helper.js');
+// remove [0], output file should have the same json structure
 let user1 = readFromFile('./myjson.json')[0];
 let user2 = updateObject(user1);
+//remove unused object
 let user3 = {
   "firstName": "Bob",
   "lastName": "Smith",
@@ -45,6 +47,7 @@ function deepEqual(elem1, elem2) {
     if(elem1 === elem2) {
         return true;
     }
+    // simplify
     if(typeof elem1 == 'object' && typeof elem2 == 'object' && elem1 != null && elem2 != null) {
       if(Object.keys(elem1).length == Object.keys(elem2).length) {
 
@@ -69,8 +72,9 @@ function deepEqual(elem1, elem2) {
     } return false;
   }
 
-
+//move outside the function
 function newWriteTo(){
+  // simplify
   if(deepEqual(user1, user2) == true){
     console.log('True')
   } else {
