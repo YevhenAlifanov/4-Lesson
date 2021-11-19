@@ -1,4 +1,6 @@
-
+/*
+Remove commented code
+ */
 const fs = require('fs-extra');
 // fs.readFile('./myjson.js', 'utf-8', ('err, jsonString') => {
 //     console.log(jsonString)
@@ -7,6 +9,8 @@ const fs = require('fs-extra');
 function readFromFile(path){
     return fs.readJSONSync(path);
 };
+
+//remove unused variable
 let user = readFromFile('./myjson.json')[0];
 
 function writeToFile( path, obj){
@@ -37,7 +41,7 @@ function updateObject(mainObj){
 };
 
 
-
+// remove unused variable
 const copy = updateObject(user);
 // console.log(copy);
 
