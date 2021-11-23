@@ -1,45 +1,10 @@
 const {readFromFile,writeToFile,updateObject} =require('./helper.js');
+
 let user1 = readFromFile('./myjson.json')[0];
 let user2 = updateObject(user1);
-let user3 = {
-  "firstName": "Bob",
-  "lastName": "Smith",
-  "gender": "male",
-  "age": 35,
-  "children": {
-    "daugthers": [
-      {
-        "name": "Cristal",
-        "gender": "female",
-        "age": 18
-      },
-      {
-        "name": "Hanna",
-        "gender": "female",
-        "age": 5
-      }
-    ],
-    "sons": [
-      {
-        "name": "Mike",
-        "gender": "male",
-        "age": 15
-      }
-    ]
-  },
-  "hobbies": [
-    "cycling",
-    "swimming",
-    "shooting"
-  ],
-  "luckyNumbers": [
-    3,
-    5,
-    15,
-    99,
-    77
-  ]
-};
+
+
+
 
 function deepEqual(elem1, elem2) {
     if(elem1 === elem2) {
@@ -65,20 +30,16 @@ function deepEqual(elem1, elem2) {
             };
           }
         }return true;
-      } //return true;
+      }
     } return false;
   }
 
 
-function newWriteTo(){
-  if(deepEqual(user1, user2) == true){
-    console.log('True')
-  } else {
-    writeToFile( './writeFile.json', user2)
-  };
-}
-
-newWriteTo()
+if(deepEqual(user1, user3) == true){
+  console.log('True')
+} else {
+  writeToFile( './writeFile.json', user2)
+};
 
 
 
