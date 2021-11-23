@@ -35,10 +35,8 @@ function deepEqual(elem1, elem2) {
   }
 
 
-if(deepEqual(user1, user2) == true){
+if(!deepEqual(user1, user2)){
   console.log('True')
-} else {
-  writeToFile( './writeFile.json', user2)
 };
 
 

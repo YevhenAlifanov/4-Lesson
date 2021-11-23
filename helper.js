@@ -6,7 +6,7 @@ function readFromFile(path){
     return fs.readJSONSync(path);
 };
 
-let user = readFromFile('./myjson.json')[0];
+let user = readFromFile('./myjson.json');
 
 
 
@@ -24,7 +24,7 @@ function updateObject(mainObj){
     return objCopi;
 };
 
-updateObject(user);
+updateObject(user[0]);
 
 
 module.exports = {readFromFile,writeToFile,updateObject}; 
