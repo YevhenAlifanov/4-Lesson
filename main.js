@@ -1,7 +1,7 @@
 const {readFromFile,writeToFile,updateObject} =require('./helper.js');
 
-let user1 = readFromFile('./myjson.json')[0];
-let user2 = updateObject(user1);
+let user1 = readFromFile('./myjson.json');
+let user2 = updateObject(user1[0]);
 
 
 
@@ -36,7 +36,7 @@ function deepEqual(elem1, elem2) {
 
 
 if(!deepEqual(user1, user2)){
-  console.log('True')
+ return writeToFile('./writeFile.json', user2)
 };
 
 
